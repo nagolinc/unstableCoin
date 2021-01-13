@@ -1,0 +1,158 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract ChainlinkOracle",
+						"name": "target_USD",
+						"type": "address"
+					},
+					{
+						"internalType": "contract ChainlinkOracle",
+						"name": "collateral_USD",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "twentyFourHours",
+						"type": "uint256"
+					}
+				],
+				"name": "quotentOracle",
+				"outputs": [
+					{
+						"internalType": "contract IPriceOracleGetter",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract ChainlinkOracle",
+						"name": "ETH_USD",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "twentyFourHours",
+						"type": "uint256"
+					}
+				],
+				"name": "reciprocalOracle",
+				"outputs": [
+					{
+						"internalType": "contract IPriceOracleGetter",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "syntheticToken",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "collateral",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "twentyFourHours",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint8",
+						"name": "granularity",
+						"type": "uint8"
+					},
+					{
+						"internalType": "address",
+						"name": "uniswapFactory",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "decimals",
+						"type": "uint256"
+					}
+				],
+				"name": "uniswapIPriceOracleGetter",
+				"outputs": [
+					{
+						"internalType": "contract IPriceOracleGetter",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"localhost/unstable_truffle/contracts/IOracleDeployer.sol": "IDeployOracle"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"localhost/unstable_truffle/contracts/IChainlink.sol": {
+			"keccak256": "0x0482f868bae4043cb09086e2a4e708309386450a46ca2d3e9d3df70e03ea2cdd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e42704f0ce17ee6acbb90a21ac9502eb890e5f0ebd002e2dc2b22f655ccc9ffd",
+				"dweb:/ipfs/QmWUyQXszXzBv3hRijj2ehXRNQragSQAhRH6T19Res4Fai"
+			]
+		},
+		"localhost/unstable_truffle/contracts/IOracleDeployer.sol": {
+			"keccak256": "0x418b7e1474f8b1398191c961c426261328e8c805e5e2f12b2849a748ec4f599a",
+			"urls": [
+				"bzz-raw://c391584f38fd2f65d0ea87bad6dc187fe686df35ef3701be07f8fb608cb8d665",
+				"dweb:/ipfs/Qma791GFTRBuM9fc7VxMcijzpfxuJKLndnq7kj3eUQvFVZ"
+			]
+		},
+		"localhost/unstable_truffle/contracts/interfaces/IPriceOracleGetter.sol": {
+			"keccak256": "0xd6e8db688bb36c523af1fa2e2a494ca791886abd25254e0fcc4aee9b8d7f3705",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://306a4bd543db7f7cc444d1bee39bee127af3322990b655ca849d1d701e6a23a0",
+				"dweb:/ipfs/QmWEHrhAuWMSXhahZPWRnxjN4gZ3XZ93bryMz3ygdoME1R"
+			]
+		}
+	},
+	"version": 1
+}

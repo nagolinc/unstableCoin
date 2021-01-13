@@ -1,0 +1,318 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_tokenA",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_collateral",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_windowSize",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_granularity",
+						"type": "uint8"
+					},
+					{
+						"internalType": "address",
+						"name": "_factory",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_decimals",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "tokenIn",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountIn",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "tokenOut",
+						"type": "address"
+					}
+				],
+				"name": "consult",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountOut",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "factory",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_asset",
+						"type": "address"
+					}
+				],
+				"name": "getAssetPrice",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "granularity",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "observationIndexOf",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "index",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "pairObservations",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "price0Cumulative",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "price1Cumulative",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "periodSize",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "tokenA",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "tokenB",
+						"type": "address"
+					}
+				],
+				"name": "update",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "windowSize",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"localhost/unstable_truffle/contracts/UniswapIPriceOracleGetter.sol": "UniswapIPriceOracleGetter"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"localhost/unstable_truffle/contracts/ExampleSlidingWindowOracle.sol": {
+			"keccak256": "0x20f421a1b2151bc4e79e7b8f5d5848650fa4913b6a370b1a9e7f28f62573e4af",
+			"urls": [
+				"bzz-raw://724952e16429e90975359f71725fa6d5e0163e211acd5a9343a102049f628b70",
+				"dweb:/ipfs/QmQz9zQro9Wu1gHT4fV6ek5FUFyKywzKzqiGkRiViX1A8e"
+			]
+		},
+		"localhost/unstable_truffle/contracts/UniswapIPriceOracleGetter.sol": {
+			"keccak256": "0x7390dc6f70eb262a38421d7d4045d372378eb3b61cb328ba872573913fb015f4",
+			"urls": [
+				"bzz-raw://f3e75955b4b0260ce323cdfe538ec1c6a2e91aa76415881651d10ec25cd3437e",
+				"dweb:/ipfs/QmZ5qVtGuxCeYriF1UZZD87YYFdyxXcyryPPT5qcdgca91"
+			]
+		},
+		"localhost/unstable_truffle/contracts/interfaces/IERC20.sol": {
+			"keccak256": "0x5c26b39d26f7ed489e555d955dcd3e01872972e71fdd1528e93ec164e4f23385",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://efdc632af6960cf865dbc113665ea1f5b90eab75cc40ec062b2f6ae6da582017",
+				"dweb:/ipfs/QmfAZFDuG62vxmAN9DnXApv7e7PMzPqi4RkqqZHLMSQiY5"
+			]
+		},
+		"localhost/unstable_truffle/contracts/interfaces/IPriceOracleGetter.sol": {
+			"keccak256": "0xd6e8db688bb36c523af1fa2e2a494ca791886abd25254e0fcc4aee9b8d7f3705",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://306a4bd543db7f7cc444d1bee39bee127af3322990b655ca849d1d701e6a23a0",
+				"dweb:/ipfs/QmWEHrhAuWMSXhahZPWRnxjN4gZ3XZ93bryMz3ygdoME1R"
+			]
+		},
+		"localhost/unstable_truffle/contracts/interfaces/IUniswapV2Factory.sol": {
+			"keccak256": "0xe5905c0989cf5a865ed9bb7b9252536ca011c5b744017a82a7d4443b9c00a891",
+			"urls": [
+				"bzz-raw://5d2a90a0a796491507462a3da18c3f8819721d571572d765a2207c35bf0a0389",
+				"dweb:/ipfs/Qmf9ACYiT3qzjgsYuhm866FBdiBpRMXAPpQhSFbgqcyhHt"
+			]
+		},
+		"localhost/unstable_truffle/contracts/interfaces/IUniswapV2Pair.sol": {
+			"keccak256": "0x7c9bc70e5996c763e02ff38905282bc24fb242b0ef2519a003b36824fc524a4b",
+			"urls": [
+				"bzz-raw://85d5ad2dd23ee127f40907a12865a1e8cb5828814f6f2480285e1827dd72dedf",
+				"dweb:/ipfs/QmayKQWJgWmr46DqWseADyUanmqxh662hPNdAkdHRjiQQH"
+			]
+		},
+		"localhost/unstable_truffle/contracts/libraries/FixedPoint.sol": {
+			"keccak256": "0xc671208d030ea70032b9fe0ac9c05d7dcd3ef2593a1a36e7e7f03bf25c2997c4",
+			"urls": [
+				"bzz-raw://5d5fac757d514b276ae2954b28048cc854dfbeed20706b784a0c2d3efa6af752",
+				"dweb:/ipfs/QmVmSgZ8yN9wqV8wHWj8KhHYbi2LoK6pdPK1i1pBqFKcUc"
+			]
+		},
+		"localhost/unstable_truffle/contracts/libraries/SafeMath.sol": {
+			"keccak256": "0x9a9cf02622cd7a64261b10534fc3260449da25c98c9e96d1b4ae8110a20e5806",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2df142592d1dc267d9549049ee3317fa190d2f87eaa565f86ab05ec83f7ab8f5",
+				"dweb:/ipfs/QmSkJtcfWo7c42KnL5hho6GFxK6HRNV91XABx1P7xDtfLV"
+			]
+		},
+		"localhost/unstable_truffle/contracts/libraries/UniswapV2Library.sol": {
+			"keccak256": "0xc5d31def5107da6e82bbde9b33524619db4055af3163b77583f6872a3160c299",
+			"urls": [
+				"bzz-raw://5b48b6847b991d2c7539c3195caca6eedb57c05fe7fb376b11916f33d73185ab",
+				"dweb:/ipfs/Qmcc9DUEGfwXjEc6VVymmBs4N3Z6yXohZvFEAoYc4FGWKC"
+			]
+		},
+		"localhost/unstable_truffle/contracts/libraries/UniswapV2OracleLibrary.sol": {
+			"keccak256": "0x51778724aa03277046e3b00e4285a20ca28ddd17db5c266a80be050566150a37",
+			"urls": [
+				"bzz-raw://c3ac3928b989f964c82409c97455301f9a47568d3f864862b71e88d193918095",
+				"dweb:/ipfs/QmetEUVxADw5TtzZ3UbZFzCHJTF4LRHzxK1P3a64Jr7wAn"
+			]
+		}
+	},
+	"version": 1
+}

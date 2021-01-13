@@ -1,0 +1,109 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract ChainlinkOracle",
+						"name": "_oracleTop",
+						"type": "address"
+					},
+					{
+						"internalType": "contract ChainlinkOracle",
+						"name": "_oracleBottom",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_window",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_asset",
+						"type": "address"
+					}
+				],
+				"name": "getAssetPrice",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"localhost/unstable_truffle/contracts/ProductOracle.sol": "ProductOracle"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"localhost/unstable_truffle/contracts/IChainlink.sol": {
+			"keccak256": "0x0482f868bae4043cb09086e2a4e708309386450a46ca2d3e9d3df70e03ea2cdd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e42704f0ce17ee6acbb90a21ac9502eb890e5f0ebd002e2dc2b22f655ccc9ffd",
+				"dweb:/ipfs/QmWUyQXszXzBv3hRijj2ehXRNQragSQAhRH6T19Res4Fai"
+			]
+		},
+		"localhost/unstable_truffle/contracts/ProductOracle.sol": {
+			"keccak256": "0xd130ffc8cb494c4cbaeeb73765ffb3544af7648ad4570d107f77323c7ab025ab",
+			"urls": [
+				"bzz-raw://bc76e1de598e53d763d746ddbf9fc7570582477f90f2bb5f07f761b88fe7c3ea",
+				"dweb:/ipfs/QmepsU6qvXejtmodv18qjJtB3ZKWj3xFEwn3Ph85oURBYm"
+			]
+		},
+		"localhost/unstable_truffle/contracts/interfaces/IPriceOracleGetter.sol": {
+			"keccak256": "0xd6e8db688bb36c523af1fa2e2a494ca791886abd25254e0fcc4aee9b8d7f3705",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://306a4bd543db7f7cc444d1bee39bee127af3322990b655ca849d1d701e6a23a0",
+				"dweb:/ipfs/QmWEHrhAuWMSXhahZPWRnxjN4gZ3XZ93bryMz3ygdoME1R"
+			]
+		},
+		"localhost/unstable_truffle/contracts/libraries/SafeMath.sol": {
+			"keccak256": "0x9a9cf02622cd7a64261b10534fc3260449da25c98c9e96d1b4ae8110a20e5806",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2df142592d1dc267d9549049ee3317fa190d2f87eaa565f86ab05ec83f7ab8f5",
+				"dweb:/ipfs/QmSkJtcfWo7c42KnL5hho6GFxK6HRNV91XABx1P7xDtfLV"
+			]
+		}
+	},
+	"version": 1
+}

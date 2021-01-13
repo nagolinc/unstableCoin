@@ -1,0 +1,378 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "interestPerSecond",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "totalInterest",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "totalSupply",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amountToMint",
+						"type": "uint256"
+					}
+				],
+				"name": "InterestAccumulated",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "accumulateInterest",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "applyInterestGrowth",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "syntheticAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "burnStablecoin",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "collateralAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "depositCollateral",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "reserveHolder",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "syntheticAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "liqiudate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "reserveHolder",
+						"type": "address"
+					}
+				],
+				"name": "markInsolvent",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "reserveHolder",
+						"type": "address"
+					}
+				],
+				"name": "markSolvent",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "syntheticAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "mintStablecoin",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "periodDuration",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "inflationRate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint40",
+						"name": "inflationStart",
+						"type": "uint40"
+					},
+					{
+						"internalType": "uint256",
+						"name": "scalingFactor",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "startingInterestRate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "maximumInterestRate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "maximumInterestRateChangePerPeriod",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "overCollateralization",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "liquidationPenalty",
+						"type": "uint256"
+					}
+				],
+				"name": "setupInterestRate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract GovernedERC20",
+						"name": "syntheticToken",
+						"type": "address"
+					},
+					{
+						"internalType": "contract GovernedERC20",
+						"name": "pooledToken",
+						"type": "address"
+					},
+					{
+						"internalType": "contract IERC20",
+						"name": "collateralToken",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "asset",
+						"type": "address"
+					},
+					{
+						"internalType": "contract IPriceOracleGetter",
+						"name": "assetPrice",
+						"type": "address"
+					},
+					{
+						"internalType": "contract IPriceOracleGetter",
+						"name": "syntheticAssetPrice",
+						"type": "address"
+					}
+				],
+				"name": "setupTokens",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "syntheticAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "stakeSyntheticToken",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "updateInterestRate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "collateralAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdrawCollateral",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "syntheticAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdrawStake",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"localhost/unstable_truffle/contracts/CollateralizedTokenPool.sol": "CollateralizedTokenPool"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"localhost/openzeppelin-solidity/contracts/GSN/Context.sol": {
+			"keccak256": "0xdb26cbf4d028490f49831a7865c2fe1b28db44b535ca8d343785a3b768aae183",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://840b14ce0315c47d49ba328f1f9fa7654ded1c9e1559e6c5e777a7b2dc28bf0a",
+				"dweb:/ipfs/QmTLLabn4wcfGro9LEmUXUN2nwKqZSotXMvjDCLXEnLtZP"
+			]
+		},
+		"localhost/openzeppelin-solidity/contracts/math/SafeMath.sol": {
+			"keccak256": "0x9a9cf02622cd7a64261b10534fc3260449da25c98c9e96d1b4ae8110a20e5806",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2df142592d1dc267d9549049ee3317fa190d2f87eaa565f86ab05ec83f7ab8f5",
+				"dweb:/ipfs/QmSkJtcfWo7c42KnL5hho6GFxK6HRNV91XABx1P7xDtfLV"
+			]
+		},
+		"localhost/openzeppelin-solidity/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x5c26b39d26f7ed489e555d955dcd3e01872972e71fdd1528e93ec164e4f23385",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://efdc632af6960cf865dbc113665ea1f5b90eab75cc40ec062b2f6ae6da582017",
+				"dweb:/ipfs/QmfAZFDuG62vxmAN9DnXApv7e7PMzPqi4RkqqZHLMSQiY5"
+			]
+		},
+		"localhost/openzeppelin-solidity/contracts/utils/Address.sol": {
+			"keccak256": "0xf5fa8cbdffa5ef8be49b246b5628facc30b71707e78a45d80d93b64eff3fe390",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://774e78a9ff32792cc95db4d2ceaf3a7965bb7f0bea5e6cb7cff182b450d44b37",
+				"dweb:/ipfs/QmRRMC4uj7eAcLW7chynA3sNEYULMFazdLwQHKHQPyzAbA"
+			]
+		},
+		"localhost/unstable_truffle/contracts/CollateralizedTokenPool.sol": {
+			"keccak256": "0x67812203ed29231442a247d84e576776e4d9a5a192c5f0eaef32e0af1c14cfb3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f1117544da9eefb06f0736a355382fc327c587b881d8b2e560c1e0b9379143a0",
+				"dweb:/ipfs/QmRKydc1xedX9ybat2BnUZbM6njm2PMEmVweQMQ8GLts7H"
+			]
+		},
+		"localhost/unstable_truffle/contracts/interfaces/IPriceOracleGetter.sol": {
+			"keccak256": "0xd6e8db688bb36c523af1fa2e2a494ca791886abd25254e0fcc4aee9b8d7f3705",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://306a4bd543db7f7cc444d1bee39bee127af3322990b655ca849d1d701e6a23a0",
+				"dweb:/ipfs/QmWEHrhAuWMSXhahZPWRnxjN4gZ3XZ93bryMz3ygdoME1R"
+			]
+		},
+		"localhost/unstable_truffle/contracts/libraries/WadRayMath.sol": {
+			"keccak256": "0x7e9315ea57262deca5309eb33d607694819368cdaeb8d98ff6b5dcd6204a75cc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f5e5ee55e63700771189d8bcf253e9733e3b6299ae1cfced96f44a1b0588220b",
+				"dweb:/ipfs/QmeRsXkZg74GMy7x8EL858NfHzwU2PkkAJNpRafPPZedhi"
+			]
+		},
+		"localhost/unstable_truffle/contracts/tokenization/GovernedERC20.sol": {
+			"keccak256": "0x934a3c1c9a9d4e1056d599c033314ccf63176a6c0a7d82380a4fd818cb163853",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://321e6ebb8a69de9f475ec63b9f97325fc4dcba9742ad4ddde207c274064d430c",
+				"dweb:/ipfs/QmPtj8dq4Bc4hWNHiYDQMoFK2g2VBnMHpdfwf2Q637MHYh"
+			]
+		}
+	},
+	"version": 1
+}
